@@ -1,0 +1,30 @@
+.drawer {
+  position: fixed;
+  flex-direction: column;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: #222;
+  z-index: 1000;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.backdrop {
+  background-color: transparent;
+  transition: 0.2s ease-out background-color;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.24);
+}

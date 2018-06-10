@@ -1,0 +1,28 @@
+{
+  "name": "rebirthdb-website",
+  "description": "RebirthDB website",
+  "version": "1.0.0",
+  "author": "RebirthDB",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rebirthdb/rebirthdb-website"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-typography": "^1.7.18",
+    "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.12.0"
+  }
+}

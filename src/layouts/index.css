@@ -1,0 +1,39 @@
+.space {
+  flex: 1;
+}
+
+.drawer-slide-enter {
+  transform: translateX(200px);
+}
+
+.drawer-slide-enter-active {
+  transition: .2s ease-out transform;
+  transform: translateX(0);
+}
+
+.drawer-slide-exit {
+  transform: translateX(0);
+}
+
+.drawer-slide-exit-active {
+  transition: .2s ease-out transform;
+  transform: translateX(200px);
+}
+
+.backdrop-fade-enter {
+  opacity: 0.01;
+}
+
+.backdrop-fade-enter-active {
+  transition: .2s ease-out opacity;
+  opacity: 1;
+}
+
+.backdrop-fade-exit {
+  opacity: 1;
+}
+
+.backdrop-fade-exit-active {
+  transition: .2s ease-out opacity;
+  opacity: 0.01;
+}

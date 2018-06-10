@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  padding: 24px;
+  background-color: #28d4e4;
+  color: #fff;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.title > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.links {
+  display: none;
+}
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
+  margin-right: 24px;
+}
+
+.link.active {
+  position: relative;
+}
+
+.link.active:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+@media (min-width: 576px) {
+  .links {
+    display: block;
+  }
+
+  .link:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .link:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .link:last-child {
+    margin-right: calc(50px - 24px);
+  }
+}

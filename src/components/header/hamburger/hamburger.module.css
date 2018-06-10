@@ -1,0 +1,27 @@
+.hamburger {
+  width: 32px;
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+}
+
+.line {
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  background-color: #fff;
+}
+
+.line:first-child {
+  margin-top: 0;
+}
+
+.line:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .hamburger {
+    display: none;
+  }
+}
