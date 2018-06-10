@@ -12,11 +12,11 @@
   font-size: 24px;
   font-weight: 400;
   color: #fff;
-}
 
-.title > a {
-  color: inherit;
-  text-decoration: inherit;
+  & > a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
 .links {
@@ -31,16 +31,16 @@
 
 .link.active {
   position: relative;
-}
 
-.link.active:after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #fff;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+  }
 }
 
 @media (min-width: 576px) {

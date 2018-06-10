@@ -11,16 +11,16 @@ const Header = ({ title, toggleDrawer }) => (
     </h1>
     <div className="space" />
     <nav className={styles.links}>
-      <Link className={styles.link} activeClassName="active" to="/faq">
+      <Link className={styles.link} activeClassName={styles.active} to="/faq">
         faq
       </Link>
-      <Link className={styles.link} activeClassName="active" to="/docs">
+      <Link className={styles.link} activeClassName={styles.active} to="/docs">
         docs
       </Link>
-      <Link className={styles.link} activeClassName="active" to="/api">
+      <Link className={styles.link} activeClassName={styles.active} to="/api">
         api
       </Link>
-      <Link className={styles.link} activeClassName="active" to="/community">
+      <Link className={styles.link} activeClassName={styles.active} to="/community">
         community
       </Link>
     </nav>

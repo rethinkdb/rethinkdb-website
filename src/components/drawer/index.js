@@ -13,6 +13,13 @@ export default ({ opened, toggle }) => (
       unmountOnExit={true}
     >
       <nav key="drawer" className={styles.drawer}>
+        <span className={styles.link} onClick={toggle}>
+          <div className={styles.cross}>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
+          close
+        </span>
         <Link className={styles.link} activeClassName="active" to="/faq">
           faq
         </Link>
