@@ -1,6 +1,7 @@
 import React from 'react'
 
 import hero from '../assets/hero.png'
+import '../main.css'
 
 const IndexPage = () => (
   <div>

@@ -7,10 +7,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-workbox',
+    'gatsby-plugin-react-next',
+    'gatsby-plugin-catch-links',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
+        color: '#ff7d92',
       }
     }
   ]
