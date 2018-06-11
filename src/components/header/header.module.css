@@ -1,17 +1,19 @@
+@import '../../theme.css';
+
 .header {
   display: flex;
   align-items: center;
   height: 75px;
   padding: 24px;
-  background-color: #28d4e4;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--foregroundPrimary);
 }
 
 .title {
   margin: 0;
   font-size: 24px;
   font-weight: 400;
-  color: #fff;
+  color: var(--foregroundPrimary);
 
   & > a {
     color: inherit;
@@ -39,7 +41,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--foregroundPrimary);
   }
 }
 

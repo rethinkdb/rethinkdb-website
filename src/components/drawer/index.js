@@ -4,12 +4,26 @@ import Link from 'gatsby-link'
 
 import styles from './drawer.module.css'
 
+const drawerTransition = {
+  enter: styles.transitionDrawerEnter,
+  enterActive: styles.transitionDrawerEnterActive,
+  exit: styles.transitionDrawerExit,
+  exitActive: styles.transitionDrawerExitActive
+}
+
+const backdropTransition = {
+  enter: styles.transitionBackdropEnter,
+  enterActive: styles.transitionBackdropEnterActive,
+  exit: styles.transitionBackdropExit,
+  exitActive: styles.transitionBackdropExitActive
+}
+
 export default ({ opened, toggle }) => (
   <div>
     <CSSTransition
       in={opened}
       timeout={200}
-      classNames="drawer-slide"
+      classNames={drawerTransition}
       unmountOnExit={true}
     >
       <nav key="drawer" className={styles.drawer}>
@@ -36,8 +50,8 @@ export default ({ opened, toggle }) => (
     </CSSTransition>
     <CSSTransition
       in={opened}
-      timeout={200}
-      classNames="backdrop-fade"
+      timeout={2000}
+      classNames={backdropTransition}
       unmountOnExit={true}
     >
       <div className={styles.backdrop} key="backdrop" onClick={toggle} />

@@ -1,0 +1,10 @@
+:root {
+  --primary: #7df1fb;
+  --foregroundPrimary: #fff;
+  --dark: #222;
+  --foregroundDark: color(#fff a(.9));
+
+  --easingStandard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easingDecelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --easingAccelerate: cubic-bezier(0.4, 0.0, 1, 1);
+}

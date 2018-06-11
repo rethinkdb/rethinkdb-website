@@ -1,3 +1,5 @@
+@import '../../theme.css';
+
 .drawer {
   position: fixed;
   flex-direction: column;
@@ -5,7 +7,7 @@
   top: 0;
   right: 0;
   width: 200px;
-  background-color: #222;
+  background-color: var(--dark);
   z-index: 1000;
 }
 
@@ -13,13 +15,13 @@
   display: flex;
   align-items: center;
   padding: 8px 16px;
-  color: #fff;
+  color: var(--foregroundDark);
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid color(#fff a(.24));
 
   &:hover {
-    background-color: rgba(255,255,255,.12);
+    background-color: color(#fff a(.12));
   }
 }
 
@@ -62,4 +64,44 @@
   bottom: 0;
   z-index: 500;
   background-color: rgba(0, 0, 0, 0.24);
+}
+
+.transitionDrawer {
+  &Enter {
+    transform: translateX(200px);
+  }
+
+  &EnterActive {
+    transition: 250ms var(--easingDecelerate) transform;
+    transform: translateX(0);
+  }
+
+  &Exit {
+    transform: translateX(0);
+  }
+
+  &ExitActive {
+    transition: 200ms var(--easingAccelerate) transform;
+    transform: translateX(200px);
+  }
+}
+
+.transitionBackdrop {
+  &Enter {
+    opacity: 0.01;
+  }
+
+  &EnterActive {
+    transition: 250ms var(--easingStandard) opacity;
+    opacity: 1;
+  }
+
+  &Exit {
+    opacity: 1;
+  }
+
+  &ExitActive {
+    transition: 200ms var(--easingStandard) opacity;
+    opacity: 0.01;
+  }
 }
