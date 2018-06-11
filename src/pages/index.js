@@ -7,7 +7,10 @@ import '../main.css'
 const IndexPage = ({ data }) => (
   <div>
     <img src={hero} alt="RebirtDB hero" />
-    <HeroNotes latestRelease={data.githubLastRelease.release} />
+    <HeroNotes
+      latestRelease={data.githubRepositoryInformations.release}
+      stargazers={data.githubRepositoryInformations.stargazers}
+    />
   </div>
 )
 
@@ -15,8 +18,9 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    githubLastRelease {
+    githubRepositoryInformations {
       release
+      stargazers
     }
   }
 `

@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-source-github-last-release",
+  "name": "gatsby-source-github-repository",
   "version": "0.0.1",
   "dependencies": {
     "axios": "^0.18.0"
