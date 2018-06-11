@@ -1,0 +1,8 @@
+siteMetadata:
+  title    : 'RebirthDB'
+  fullTitle: 'Rebirth DB: the open-source database for the realtime web'
+  keywords : 'RebirthDB, Rebirth, Rethink, RethinkDB, database, real-time, scalable, open-source'
+
+index:
+  catchPhrase: 'The open-source database for the realtime web'
+  twitterAccount: '@rebirthdb'

@@ -1,18 +1,19 @@
 module.exports = {
-  siteMetadata: {
-    title: 'RebirthDB',
-    fullTitle: 'Rebirth DB: the open-source database for the realtime web',
-    keywords: 'RebirthDB, Rebirth, Rethink, RethinkDB, database, real-time, scalable, open-source'
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-workbox',
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-json',
+    { resolve: 'gatsby-source-github-last-release', options: { user: 'RethinkDB', repo: 'rethinkdb' } },
+    // { resolve: 'gatsby-source-github-last-release', options: { user: 'RebirthDB', repo: 'rebirthdb' } },
+    { resolve: 'gatsby-plugin-nprogress', options: { color: '#ff7d92', } },
     {
-      resolve: 'gatsby-plugin-nprogress',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        color: '#ff7d92',
+        name: 'site',
+        path: './site.yaml'
       }
     }
   ]

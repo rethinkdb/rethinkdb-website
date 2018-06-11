@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
@@ -25,7 +24,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const meta = this.props.data.site.siteMetadata
+    const meta = this.props.data.yaml.siteMetadata
 
     return (
       <div>
@@ -47,8 +46,8 @@ class Layout extends React.Component {
 export default Layout
 
 export const query = graphql`
-  query SiteMetadataQuery {
-    site {
+  query IndexLayoutQuery {
+    yaml {
       siteMetadata {
         title
         fullTitle
