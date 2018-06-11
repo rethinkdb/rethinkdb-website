@@ -19,6 +19,7 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-plugin-workbox": "^0.1.6",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.3.1"
   },
