@@ -9,12 +9,25 @@
   font-weight: 500;
   font-size: 18px;
   color: var(--foregroundAccent);
+  cursor: pointer;
   background-color: var(--primary);
+  box-shadow: 0 0 2px color(var(--primary) lightness(-15%) blackness(15%));
   border: 0;
   border-radius: 3px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    transform: translateY(3px);
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
-.button.cta {
+.cta {
   background-color: var(--accent);
+  box-shadow: 0 2px 0 color(var(--accent) lightness(-15%) blackness(15%));
   border: 0;
 }

@@ -72,7 +72,7 @@
   }
 
   &EnterActive {
-    transition: 250ms var(--easingDecelerate) transform;
+    transition: 200ms var(--easingDecelerate) transform;
     transform: translateX(0);
   }
 
@@ -92,7 +92,7 @@
   }
 
   &EnterActive {
-    transition: 250ms var(--easingStandard) opacity;
+    transition: 200ms var(--easingStandard) opacity;
     opacity: 1;
   }
 

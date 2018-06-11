@@ -50,7 +50,7 @@ export default ({ opened, toggle }) => (
     </CSSTransition>
     <CSSTransition
       in={opened}
-      timeout={2000}
+      timeout={200}
       classNames={backdropTransition}
       unmountOnExit={true}
     >

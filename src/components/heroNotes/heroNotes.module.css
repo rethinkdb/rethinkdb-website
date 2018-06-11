@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  line-height: 2;
   flex-wrap: wrap;
   padding: 16px;
   color: var(--foregroundWhite);
