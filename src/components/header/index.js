@@ -20,7 +20,11 @@ const Header = ({ title, toggleDrawer }) => (
       <Link className={styles.link} activeClassName={styles.active} to="/api">
         api
       </Link>
-      <Link className={styles.link} activeClassName={styles.active} to="/community">
+      <Link
+        className={styles.link}
+        activeClassName={styles.active}
+        to="/community"
+      >
         community
       </Link>
     </nav>

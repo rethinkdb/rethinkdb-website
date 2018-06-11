@@ -25,35 +25,20 @@ class Layout extends React.Component {
   }
 
   render() {
+    const meta = this.props.data.site.siteMetadata
+
     return (
       <div>
         <Helmet>
-          <title>{this.props.data.site.siteMetadata.fullTitle}</title>
-          <meta
-            name="og:sitename"
-            content={this.props.data.site.siteMetadata.title}
-          />
-          <meta
-            name="og:description"
-            content={this.props.data.site.siteMetadata.fullTitle}
-          />
-          <meta
-            name="description"
-            content={this.props.data.site.siteMetadata.fullTitle}
-          />
-          <meta
-            name="keywords"
-            content={this.props.data.site.siteMetadata.keywords}
-          />
+          <title>{meta.fullTitle}</title>
+          <meta name="og:sitename" content={meta.title} />
+          <meta name="og:description" content={meta.fullTitle} />
+          <meta name="description" content={meta.fullTitle} />
+          <meta name="keywords" content={meta.keywords} />
         </Helmet>
-        <Header
-          title={this.props.data.site.siteMetadata.title}
-          toggleDrawer={this.toggleDrawer}
-        />
+        <Header title={meta.title} toggleDrawer={this.toggleDrawer} />
         <Drawer opened={this.state.drawer} toggle={this.toggleDrawer} />
-        <main>
-          {this.props.children()}
-        </main>
+        <main>{this.props.children()}</main>
       </div>
     )
   }
@@ -62,10 +47,12 @@ class Layout extends React.Component {
 export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery {
+  query SiteMetadataQuery {
     site {
       siteMetadata {
         title
+        fullTitle
+        keywords
       }
     }
   }

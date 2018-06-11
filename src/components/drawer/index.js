@@ -8,14 +8,14 @@ const drawerTransition = {
   enter: styles.transitionDrawerEnter,
   enterActive: styles.transitionDrawerEnterActive,
   exit: styles.transitionDrawerExit,
-  exitActive: styles.transitionDrawerExitActive
+  exitActive: styles.transitionDrawerExitActive,
 }
 
 const backdropTransition = {
   enter: styles.transitionBackdropEnter,
   enterActive: styles.transitionBackdropEnterActive,
   exit: styles.transitionBackdropExit,
-  exitActive: styles.transitionBackdropExitActive
+  exitActive: styles.transitionBackdropExitActive,
 }
 
 export default ({ opened, toggle }) => (
@@ -29,8 +29,8 @@ export default ({ opened, toggle }) => (
       <nav key="drawer" className={styles.drawer}>
         <span className={styles.link} onClick={toggle}>
           <div className={styles.cross}>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
+            <div className={styles.line} />
+            <div className={styles.line} />
           </div>
           close
         </span>
