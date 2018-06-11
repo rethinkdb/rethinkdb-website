@@ -1,0 +1,20 @@
+@import '../../theme.css';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  min-width: 225px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--foregroundAccent);
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 3px;
+}
+
+.button.cta {
+  background-color: var(--accent);
+  border: 0;
+}

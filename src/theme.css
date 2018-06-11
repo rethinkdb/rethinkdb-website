@@ -1,10 +1,19 @@
 :root {
   --primary: #7df1fb;
-  --foregroundPrimary: #fff;
+  --foregroundPrimary: color(#222 a(.9));
   --dark: #222;
   --foregroundDark: color(#fff a(.9));
+  --accent: #ff7d92;
+  --foregroundAccent: color(#fff a(.9));
+  --white: #fafafa;
+  --foregroundWhite: color(#222 a(.9));
 
   --easingStandard: cubic-bezier(0.4, 0.0, 0.2, 1);
   --easingDecelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
   --easingAccelerate: cubic-bezier(0.4, 0.0, 1, 1);
 }
+
+@custom-media --small (min-width: 576px);
+@custom-media --medium (min-width: 768px);
+@custom-media --large (min-width: 996px);
+@custom-media --extra (min-width: 1200px);

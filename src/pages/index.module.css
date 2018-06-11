@@ -1,0 +1,41 @@
+@import '../theme.css';
+
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  line-height: 1.5;
+  background-image: url('../assets/hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.heroText {
+  font-size: 36px;
+}
+
+.hero > strong {
+  display: block;
+}
+
+.buttonArrow {
+  line-height: .9;
+  font-size: 24px;
+}
+
+@media (--medium) {
+  .hero {
+    padding: 60px 20px;
+  }
+}
+
+@media (--large) {
+  .hero {
+    padding: 80px 20px;
+  }
+}
+
+@media (--extra) {
+  .hero {
+    padding: 100px 20px;
+  }
+}

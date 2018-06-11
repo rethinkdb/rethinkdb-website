@@ -1,0 +1,33 @@
+@import '../../theme.css';
+
+.heroNotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 16px;
+  color: var(--foregroundWhite);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  & > svg {
+    fill: var(--foregroundWhite);
+  }
+}
+
+@media (--small) {
+  .heroNotes {
+    flex-direction: row;
+    align-items: center;
+  }
+}
