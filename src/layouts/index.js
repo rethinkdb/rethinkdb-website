@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Drawer from '../components/drawer'
-import './index.css'
 
 class Layout extends React.Component {
   state = {

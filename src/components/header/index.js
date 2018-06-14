@@ -11,21 +11,21 @@ const Header = ({ title, toggleDrawer }) => (
     </h1>
     <div className="space" />
     <nav className={styles.links}>
-      <Link className={styles.link} activeClassName={styles.active} to="/faq">
-        faq
-      </Link>
       <Link className={styles.link} activeClassName={styles.active} to="/docs">
-        docs
+        Docs
       </Link>
       <Link className={styles.link} activeClassName={styles.active} to="/api">
-        api
+        API
+      </Link>
+      <Link className={styles.link} activeClassName={styles.active} to="/faq">
+        FAQ
       </Link>
       <Link
         className={styles.link}
         activeClassName={styles.active}
         to="/community"
       >
-        community
+        Community
       </Link>
     </nav>
     <Hamburger onClick={toggleDrawer} />

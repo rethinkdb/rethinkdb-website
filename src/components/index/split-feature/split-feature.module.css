@@ -1,0 +1,41 @@
+@import '../../../theme.css';
+
+.split {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.split > article {
+  padding: 60px 0;
+}
+
+.split > article > h1 {
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.split > figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (--small) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > article {
+    width: 50%;
+    padding: 60px 60px 60px 0;
+  }
+
+  .split > figure {
+    width: 50%;
+  }
+}

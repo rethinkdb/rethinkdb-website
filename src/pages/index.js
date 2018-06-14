@@ -1,7 +1,10 @@
 import React from 'react'
+import cx from 'classnames'
 
 import HeroNotes from '../components/heroNotes'
 import Button from '../components/button'
+import SplitFeature from '../components/index/split-feature'
+import LiveRequest from '../components/index/live-request'
 import styles from './index.module.css'
 import '../main.css'
 
@@ -27,6 +30,29 @@ const IndexPage = ({ data }) => (
       release={data.yaml.index.releaseLink}
       github={data.yaml.index.githubLink}
     />
+    <div className={cx(styles.section, styles.intro)}>
+      <SplitFeature>
+        <article>
+          <h1>RethinkDB pushes JSON to your apps in realtime.</h1>
+          <p>
+            When your app polls for data, it becomes slow, unscalable, and
+            cumbersome to maintain.<br />
+            <br />
+            RethinkDB is the open-source, scalable database that makes building
+            realtime apps dramatically easier.<br />
+            <br />
+            <Button>
+              What is RethinkDB&nbsp;<span className={styles.buttonArrow}>
+                &rsaquo;
+              </span>
+            </Button>
+          </p>
+        </article>
+        <figure>
+          <LiveRequest />
+        </figure>
+      </SplitFeature>
+    </div>
   </div>
 )
 

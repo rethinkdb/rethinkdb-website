@@ -20,6 +20,27 @@ strong {
   font-weight: 500;
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+h2 {
+  letter-spacing: -.5px;
+}
+
+h1 {
+  letter-spacing: -1.5px;
+}
+
 .light {
   font-weight: 200;
+}
+
+.space {
+  flex: 1;
 }

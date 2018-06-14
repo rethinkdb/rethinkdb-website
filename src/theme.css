@@ -1,12 +1,18 @@
 :root {
-  --primary: #7df1fb;
-  --foregroundPrimary: color(#222 a(.9));
+  --primary: #64e5f1;
+  --foregroundPrimary: #000;
+
   --dark: #222;
-  --foregroundDark: color(#fff a(.9));
+  --foregroundDark: #fff;
+
   --accent: #ff7d92;
-  --foregroundAccent: color(#fff a(.9));
-  --white: #fafafa;
-  --foregroundWhite: color(#222 a(.9));
+  --foregroundAccent: #fff;
+
+  --white: #f5ffff;
+  --foregroundWhite: #000;
+
+  --darkGreen: #255f6e;
+  --foregroundDarkGreen: #fff;
 
   --easingStandard: cubic-bezier(0.4, 0.0, 0.2, 1);
   --easingDecelerate: cubic-bezier(0.0, 0.0, 0.2, 1);

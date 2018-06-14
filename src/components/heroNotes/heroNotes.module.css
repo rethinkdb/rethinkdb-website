@@ -8,7 +8,8 @@
   line-height: 2;
   flex-wrap: wrap;
   padding: 16px;
-  color: var(--foregroundWhite);
+  background-color: var(--darkGreen);
+  color: var(--foregroundDarkGreen);
 }
 
 .link {
@@ -22,7 +23,7 @@
   }
 
   & > svg {
-    fill: var(--foregroundWhite);
+    fill: var(--foregroundDarkGreen);
   }
 }
 

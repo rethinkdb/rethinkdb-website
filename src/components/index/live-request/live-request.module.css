@@ -1,0 +1,70 @@
+@import '../../../theme.css';
+
+.live {
+
+}
+
+.request {
+  display: flex;
+  /* border: 2px solid var(--darkGreen); */
+  padding: 12px 24px;
+  line-height: 1.4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fff;
+  font-family: inconsolata, monospace;
+  box-shadow: 0 15px 35px color(var(--white) a(.1)),
+              0 5px 15px color(var(--dark) a(.12));
+}
+
+.code {
+  margin: 0;
+  color: color(var(--dark) a(.8));
+
+  & > .str {
+    color: var(--accent);
+  }
+
+  & > .nmb {
+    color: color(var(--primary) lightness(-15%));
+  }
+}
+
+.lines {
+  margin-right: 12px;
+  color: color(var(--dark) a(.6));
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 15px 35px color(var(--white) a(.1)),
+              0 5px 15px color(var(--dark) a(.12));
+}
+
+.result {
+  height: 44px;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  border: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+    max-height: 44px;
+    transform: scaleY(1);
+    border-top: 1px solid color(var(--dark) a(.12));
+    transition: opacity .2s ease-out,
+                max-height .2s ease-out,
+                transform .2s ease-out;
+  }
+
+  & > pre {
+    padding: 12px;
+  }
+}
