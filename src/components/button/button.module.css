@@ -11,7 +11,7 @@
   color: var(--foregroundDarkGreen);
   cursor: pointer;
   background-color: var(--darkGreen);
-  box-shadow: 0 2px 4px color(var(--dark) a(.12));
+  box-shadow: 0 2px 4px color(var(--dark) a(.4));
   border: 0;
   border-radius: 3px;
 
@@ -20,7 +20,7 @@
   }
 
   &:active {
-    transform: translateY(3px);
+    box-shadow: none;
     outline: 0;
     box-shadow: none;
   }
@@ -30,4 +30,14 @@
   background-color: var(--accent);
   box-shadow: 0 2px 0 color(var(--accent) lightness(-15%) blackness(15%));
   border: 0;
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+.reverse {
+  border: 2px solid var(--darkGreen);
+  background-color: transparent;
+  color: var(--darkGreen);
 }

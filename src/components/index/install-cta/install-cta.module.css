@@ -1,0 +1,28 @@
+@import '../../../theme.css';
+
+div.installCta {
+  background-color: var(--accent);
+  color: var(--foregroundAccent);
+  text-align: center;
+}
+
+.installCta > h2 {
+  margin-bottom: 24px;
+}
+
+.buttons {
+  text-align: center;
+
+  & > button:first-child {
+    display: block;
+    margin: 0 auto 12px auto;
+  }
+}
+
+@media (--small) {
+  .buttons  > button:first-child {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}

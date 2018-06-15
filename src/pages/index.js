@@ -1,10 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
 
-import HeroNotes from '../components/heroNotes'
 import Button from '../components/button'
+import HeroNotes from '../components/index/heroNotes'
 import SplitFeature from '../components/index/split-feature'
 import LiveRequest from '../components/index/live-request'
+import InstallCta from '../components/index/install-cta'
 import styles from './index.module.css'
 import '../main.css'
 
@@ -17,7 +18,7 @@ const IndexPage = ({ data }) => (
         <span className="light">for the realtime web</span>
       </div>
       <br />
-      <Button cta={true}>
+      <Button to="/docs" cta={true}>
         Install RebirthDB&nbsp;<span className={styles.buttonArrow}>
           &rsaquo;
         </span>
@@ -41,7 +42,7 @@ const IndexPage = ({ data }) => (
             RebirthDB is the open-source, scalable database that makes building
             realtime apps dramatically easier.<br />
             <br />
-            <Button>
+            <Button to="/docs">
               What is RebirthDB&nbsp;<span className={styles.buttonArrow}>
                 &rsaquo;
               </span>
@@ -53,6 +54,7 @@ const IndexPage = ({ data }) => (
         </figure>
       </SplitFeature>
     </div>
+    <InstallCta className={styles.section} />
   </div>
 )
 
