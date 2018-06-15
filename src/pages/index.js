@@ -6,6 +6,7 @@ import HeroNotes from '../components/index/heroNotes'
 import SplitFeature from '../components/index/split-feature'
 import LiveRequest from '../components/index/live-request'
 import InstallCta from '../components/index/install-cta'
+import Sponsors from '../components/index/sponsors'
 import styles from './index.module.css'
 import '../main.css'
 
@@ -55,6 +56,11 @@ const IndexPage = ({ data }) => (
       </SplitFeature>
     </div>
     <InstallCta className={styles.section} />
+    <Sponsors
+      className={styles.section}
+      images={data.allFile.edges.map(edge => edge.node.childImageSharp)}
+      links={data.yaml.index.sponsorsLinks}
+    />
   </div>
 )
 
@@ -67,11 +73,28 @@ export const query = graphql`
       stargazers
     }
 
+    allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
+      edges {
+        node {
+          childImageSharp {
+            resolutions {
+              ...GatsbyImageSharpResolutions_noBase64
+              originalName
+            }
+          }
+        }
+      }
+    }
+
     yaml {
       index {
         twitterAccount
         githubLink
         releaseLink
+        sponsorsLinks {
+          image
+          link
+        }
       }
     }
   }

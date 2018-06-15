@@ -28,6 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^1.9.270",
+    "gatsby-image": "^1.0.53",
     "gatsby-link": "^1.6.44",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.3.1"
@@ -38,10 +39,12 @@
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-sharp": "^1.6.47",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-plugin-workbox": "^0.1.6",
     "gatsby-source-filesystem": "^1.5.38",
     "gatsby-transformer-json": "^1.0.19",
+    "gatsby-transformer-sharp": "^1.6.26",
     "gatsby-transformer-yaml": "^1.5.17",
     "husky": "^1.0.0-rc.8",
     "lint-staged": "^7.2.0",

@@ -1,0 +1,20 @@
+@import '../../../theme.css';
+
+.sponsors {
+  background-color: #fff;
+}
+
+.title {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sponsorsImages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sponsor {
+  margin: 20px;
+}

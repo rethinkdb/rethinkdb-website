@@ -17,6 +17,12 @@ div.installCta {
     display: block;
     margin: 0 auto 12px auto;
   }
+
+  & > :last-child {
+    border-color: var(--foregroundAccent);
+    color: var(--foregroundAccent);
+    box-shadow: none;
+  }
 }
 
 @media (--small) {

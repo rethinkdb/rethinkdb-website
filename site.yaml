@@ -7,3 +7,8 @@ index:
   twitterAccount: '@rebirthdb'
   githubLink: 'https://github.com/RebirthDB/rebirthdb'
   releaseLink: 'https://github.com/RebirthDB/rebirthdb/releases'
+  sponsorsLinks:
+    - image: 'aidax.png'
+      link: 'http://www.aidaxbi.com'
+    - image: 'zerotier.png'
+      link: 'https://www.zerotier.com'

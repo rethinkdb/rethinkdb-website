@@ -4,6 +4,8 @@ module.exports = {
     'gatsby-plugin-workbox',
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
     'gatsby-transformer-json',
     { resolve: 'gatsby-source-github-repository', options: { user: 'RethinkDB', repo: 'rethinkdb' } },
@@ -14,6 +16,13 @@ module.exports = {
       options: {
         name: 'site',
         path: './site.yaml'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'sponsors',
+        path: './src/assets/sponsors/'
       }
     }
   ]
