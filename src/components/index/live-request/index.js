@@ -6,9 +6,9 @@ import styles from './live-request.module.css'
 class LiveRequest extends React.Component {
   state = {
     results: [
-      { player: 'john', score: 148 },
-      { player: 'daniel', score: 96 },
-      { player: 'michel', score: 79 },
+      { player: 'alyssa', score: 148 },
+      { player: 'john', score: 96 },
+      { player: 'donna', score: 79 },
     ],
     visible: [0, 0, 0],
   }
@@ -52,12 +52,12 @@ class LiveRequest extends React.Component {
               key={i}
             >
               <pre className={styles.code}>
-                {'{'}
-                <span className={styles.str}>'player'</span>:
-                <span className={styles.str}>'{result.player}'</span>,​
-                <span className={styles.str}>'score'</span>:
+                {'{'}&nbsp;
+                <span className={styles.str}>player</span>:&nbsp;
+                <span className={styles.str}>'{result.player}'</span>,​&nbsp;
+                <span className={styles.str}>score</span>:&nbsp;
                 <span className={styles.nmb}>{result.score}</span>
-                {'}'}
+                &nbsp;{'}'}
               </pre>
             </div>
           ))}

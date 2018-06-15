@@ -33,16 +33,16 @@ const IndexPage = ({ data }) => (
     <div className={cx(styles.section, styles.intro)}>
       <SplitFeature>
         <article>
-          <h1>RethinkDB pushes JSON to your apps in realtime.</h1>
+          <h1>RebirthDB pushes JSON to your apps in realtime.</h1>
           <p>
             When your app polls for data, it becomes slow, unscalable, and
             cumbersome to maintain.<br />
             <br />
-            RethinkDB is the open-source, scalable database that makes building
+            RebirthDB is the open-source, scalable database that makes building
             realtime apps dramatically easier.<br />
             <br />
             <Button>
-              What is RethinkDB&nbsp;<span className={styles.buttonArrow}>
+              What is RebirthDB&nbsp;<span className={styles.buttonArrow}>
                 &rsaquo;
               </span>
             </Button>
