@@ -1,0 +1,106 @@
+@import '../../theme.css';
+
+.footer {
+  padding: 20px;
+  background-color: var(--dark);
+  color: var(--foregroundDark);
+}
+
+.gettingStarted {
+  & > button {
+    display: inline-block;
+    margin: 12px 12px 12px 0;
+    min-width: 100px;
+    min-height: 35px;
+    font-size: 14px;
+  }
+
+  & > hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid color(#fff a(.3));
+    margin: 16px 0;
+    padding: 0;
+  }
+
+  & > button:last-of-type {
+    box-shadow: none;
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.footerLinks {
+  & > section > strong {
+    display: inline-block;
+    margin: 12px 0;
+  }
+}
+
+.links {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+  & > li {
+    margin: 6px 0;
+  }
+
+  & > li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (--medium) {
+  .footer {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+
+    & > :last-child {
+      flex: 0 1 520px;
+    }
+  }
+
+  .gettingStarted {
+    flex: 0 1 250px;
+    padding-right: 20px;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex: 1;
+
+    & > section {
+      flex: 1;
+      max-width: 185px;
+    }
+
+    & > section > strong {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (--large) {
+  .footer > :last-child {
+    flex: 0 1 680px;
+    margin-left: 24px;
+  }
+}
+
+@media (--extra) {
+  .footer > :last-child {
+    flex: 0 1 740;
+    margin-left: 32px;
+  }
+}

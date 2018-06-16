@@ -18,12 +18,12 @@
   color: inherit;
   text-decoration: none;
 
-  &:not(:last-child) {
-    margin-right: 12px;
+  &:first-of-type {
+    display: inline;
   }
 
-  & > svg {
-    fill: var(--foregroundDarkGreen);
+  &:not(:last-child) {
+    margin-right: 12px;
   }
 }
 
@@ -31,5 +31,9 @@
   .heroNotes {
     flex-direction: row;
     align-items: center;
+  }
+
+  .link:first-of-type {
+    display: inline-flex;
   }
 }

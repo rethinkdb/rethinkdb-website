@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Drawer from '../components/drawer'
+import Footer from '../components/footer'
 
 class Layout extends React.Component {
   state = {
@@ -37,6 +38,7 @@ class Layout extends React.Component {
         <Header title={meta.title} toggleDrawer={this.toggleDrawer} />
         <Drawer opened={this.state.drawer} toggle={this.toggleDrawer} />
         <main>{this.props.children()}</main>
+        <Footer />
       </div>
     )
   }

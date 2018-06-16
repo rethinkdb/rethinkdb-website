@@ -9,7 +9,7 @@ export default props => (
     <h2>Install in seconds on Linux, OS X, or Windows</h2>
     <div className={styles.buttons}>
       <Button to="/docs">Install RebirthDB</Button>
-      <Button to="/docs" reverse={true}>
+      <Button to="/faq" reverse={true}>
         Lean more
       </Button>
     </div>
