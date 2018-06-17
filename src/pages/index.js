@@ -11,6 +11,8 @@ import Sponsors from '../components/index/sponsors'
 import styles from './index.module.css'
 import '../main.css'
 
+import specBirth from '../assets/spec-birth.png'
+
 const IndexPage = ({ data }) => (
   <div>
     <Hero />
@@ -41,6 +43,20 @@ const IndexPage = ({ data }) => (
         </article>
         <figure>
           <LiveRequest />
+        </figure>
+      </SplitFeature>
+      <SplitFeature className={styles.specBirth}>
+        <article>
+          <h2>Spectrum + RebirthDB</h2>
+          <p>
+            Spectrum is a community platform, kinda of a Slack rival, and it
+            uses RethinkDB as the primary database too! It's our new home for
+            sharing ideas and discussing the project future, we talk about
+            features, funding, database questions, etc.
+          </p>
+        </article>
+        <figure>
+          <img src={specBirth} width="390" />
         </figure>
       </SplitFeature>
     </div>

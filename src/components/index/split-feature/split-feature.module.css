@@ -1,24 +1,26 @@
 @import '../../../theme.css';
 
 .split {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px 20px 20px;
 }
 
-.split > article {
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content > article {
   padding: 60px 0;
 }
 
-.split > article > h1 {
+.content > article > h1 {
   font-size: 28px;
   letter-spacing: -1px;
 }
 
-.split > figure {
+.content > figure {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -26,16 +28,16 @@
 }
 
 @media (--small) {
-  .split {
+  .content {
     flex-direction: row;
   }
 
-  .split > article {
+  .content > article {
     width: 50%;
     padding: 60px 60px 60px 0;
   }
 
-  .split > figure {
+  .content > figure {
     width: 50%;
   }
 }
