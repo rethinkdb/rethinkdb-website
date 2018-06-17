@@ -2,6 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 
 import Button from '../components/button'
+import Hero from '../components/index/hero'
 import HeroNotes from '../components/index/heroNotes'
 import SplitFeature from '../components/index/split-feature'
 import LiveRequest from '../components/index/live-request'
@@ -12,19 +13,7 @@ import '../main.css'
 
 const IndexPage = ({ data }) => (
   <div>
-    <div className={styles.hero}>
-      <div className={styles.heroText}>
-        <strong>The open-source database</strong>
-        <br />
-        <span className="light">for the realtime web</span>
-      </div>
-      <br />
-      <Button to="/docs" cta={true}>
-        Install RebirthDB&nbsp;<span className={styles.buttonArrow}>
-          &rsaquo;
-        </span>
-      </Button>
-    </div>
+    <Hero />
     <HeroNotes
       latestRelease={data.githubRepositoryInformations.release}
       stargazers={data.githubRepositoryInformations.stargazers}
