@@ -38,7 +38,7 @@ class Layout extends React.Component {
         <Header title={meta.title} toggleDrawer={this.toggleDrawer} />
         <Drawer opened={this.state.drawer} toggle={this.toggleDrawer} />
         <main>{this.props.children()}</main>
-        <Footer />
+        <Footer github={this.props.data.yaml.index.githubLink} />
       </div>
     )
   }
@@ -49,6 +49,10 @@ export default Layout
 export const query = graphql`
   query IndexLayoutQuery {
     yaml {
+      index {
+        githubLink
+      }
+
       siteMetadata {
         title
         fullTitle

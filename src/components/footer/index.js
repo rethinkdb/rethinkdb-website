@@ -5,7 +5,7 @@ import Button from '../../components/button'
 import Github from '../github'
 import styles from './footer.module.css'
 
-export default () => (
+export default props => (
   <footer className={styles.footer}>
     <div className={styles.gettingStarted}>
       <h3>Join 100,000 developers</h3>
@@ -81,7 +81,10 @@ export default () => (
         </section>
       </nav>
       <h3 className={styles.star}>
-        <Github color="#fff" size="20" />&nbsp;&nbsp;Star this project on GitHub
+        <a href={props.github}>
+          <Github color="#fff" size="20" />
+          &nbsp;&nbsp; Star this project on GitHub
+        </a>
       </h3>
     </section>
   </footer>
