@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 
 import Github from '../../github'
 import Twitter from '../../twitter'
@@ -15,7 +16,7 @@ const HeroNotes = props => {
       <a href={props.release} className={styles.link}>
         <strong>Latest Release:</strong>&nbsp;{props.latestRelease}
       </a>
-      <a href={props.github} className={styles.link}>
+      <a href={props.github} className={cx(styles.link, styles.githubLink)}>
         <Github color="#fff" size="22" />
         &nbsp;{stargazers} stars on GitHub
       </a>
