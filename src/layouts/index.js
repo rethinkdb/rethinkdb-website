@@ -25,6 +25,9 @@ class Layout extends React.Component {
 
   render() {
     const meta = this.props.data.yaml.siteMetadata
+    const pages = this.props.data.allMarkdownRemark.edges.map(n => ({
+      ...n.node.frontmatter,
+    }))
 
     return (
       <div>
@@ -36,7 +39,11 @@ class Layout extends React.Component {
           <meta name="keywords" content={meta.keywords} />
         </Helmet>
         <Header title={meta.title} toggleDrawer={this.toggleDrawer} />
-        <Drawer opened={this.state.drawer} toggle={this.toggleDrawer} />
+        <Drawer
+          opened={this.state.drawer}
+          toggle={this.toggleDrawer}
+          pages={pages}
+        />
         <main>{this.props.children()}</main>
         <Footer github={this.props.data.yaml.index.githubLink} />
       </div>
@@ -57,6 +64,19 @@ export const query = graphql`
         title
         fullTitle
         keywords
+      }
+    }
+
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            path
+            parentPage
+            title
+            category
+          }
+        }
       }
     }
   }

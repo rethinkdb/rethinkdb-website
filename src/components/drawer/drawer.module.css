@@ -25,6 +25,31 @@
   }
 }
 
+a.link:last-of-type {
+  border-bottom: 3px solid color(#fff a(.42));
+}
+
+.additionalCategory {
+  composes: link;
+  font-size: 16px;
+}
+
+.additionalSublinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 4px solid color(var(--foregroundDark) a(.42));
+
+  & > li {
+    padding: 8px 16px;
+
+    & > a {
+      color: color(var(--foregroundDark) a(.7));
+      text-decoration: none;
+    }
+  }
+}
+
 .cross {
   display: inline-block;
   height: 20px;
@@ -104,4 +129,9 @@
     transition: 200ms var(--easingStandard) opacity;
     opacity: 0.01;
   }
+}
+
+.additionalCategorySlide {
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
 }

@@ -1,0 +1,39 @@
+@import '../theme.css';
+
+.docs {
+  padding: 24px;
+  color: color(var(--dark) a(.85));
+}
+
+.docs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.docs article {
+  max-width: 800px;
+}
+
+.docs article h1 {
+  font-size: 32px;
+}
+
+.docs [class="note"] {
+  display: block;
+  margin: 20px 0;
+  padding: 12px 24px;
+  background: color(var(--primary) lightness(+27%));
+  border-radius: 3px;
+  overflow: hidden;
+  text-decoration: none;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+@media (--medium) {
+  .docs {
+    padding: 36px;
+  }
+}

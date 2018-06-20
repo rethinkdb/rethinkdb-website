@@ -1,12 +1,17 @@
 @import '../../theme.css';
 
 .header {
+  background-color: var(--primary);
+  color: var(--foregroundPrimary);
+}
+
+.content {
   display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
   align-items: center;
   height: 75px;
   padding: 24px;
-  background-color: var(--primary);
-  color: var(--foregroundPrimary);
 }
 
 .title {
