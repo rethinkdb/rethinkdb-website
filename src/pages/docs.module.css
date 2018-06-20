@@ -1,6 +1,8 @@
 @import '../theme.css';
 
 .docs {
+  display: flex;
+  justify-content: center;
   padding: 24px;
   color: color(var(--dark) a(.85));
 }
@@ -32,8 +34,41 @@
   }
 }
 
+.navigation {
+  display: none;
+  width: 245px;
+  margin-right: 24px;
+}
+
+.additionalCategory {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.additionalSublinks {
+  position: relative;
+  margin: 8px 0 0 0;
+  padding: 0 0 0 8px;
+  font-size: 14px;
+  list-style: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: color(var(--dark) a(.2));
+  }
+}
+
 @media (--medium) {
   .docs {
     padding: 36px;
+  }
+
+  .navigation {
+    display: block;
   }
 }

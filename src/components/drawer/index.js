@@ -3,9 +3,9 @@ import { SlideDown } from 'react-slidedown'
 import { CSSTransition } from 'react-transition-group'
 import Link from 'gatsby-link'
 import { withRouter } from 'react-router-dom'
-import uniq from 'lodash.uniq'
-
 import 'react-slidedown/lib/slidedown.css'
+
+import additionalTree from '../../utils/additionalTree'
 import styles from './drawer.module.css'
 
 const drawerTransition = {
@@ -43,45 +43,7 @@ class Drawer extends React.Component {
   }
 
   pageChange() {
-    const isDocs = location.pathname.indexOf('/docs') > -1
-    const isApi = location.pathname.indexOf('/api') > -1
-
-    const parentPage = isDocs ? 'docs' : isApi ? 'api' : null
-
-    if (!parentPage) {
-      this.setState({
-        additionalTree: [],
-        additionalTreeToggles: [],
-      })
-
-      return
-    }
-
-    let additionalTree = []
-
-    let additionalPages = this.props.pages.filter(
-      page => page.parentPage === parentPage
-    )
-
-    uniq(additionalPages.map(p => p.category)).forEach(header => {
-      additionalTree.push({
-        name: header,
-        children: [],
-      })
-    })
-
-    additionalPages.forEach(page => {
-      const headerIndex = additionalTree.findIndex(
-        entry => entry.name === page.category
-      )
-
-      additionalTree[headerIndex].children.push(page)
-    })
-
-    this.setState({
-      additionalTree,
-      additionalTreeToggles: additionalTree.map(() => false),
-    })
+    this.setState(additionalTree(this.props.pages))
   }
 
   toggleAdditionalTreeCategory(i) {

@@ -1,5 +1,8 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import rehypeReact from 'rehype-react'
+
+import additionalTree from '../utils/additionalTree'
 import Github from '../components/github'
 
 const renderAst = new rehypeReact({
@@ -14,10 +17,28 @@ const Docs = props => {
     ...n.node.frontmatter,
   }))
 
+  const sidebarLinks = additionalTree(pages).additionalTree
+
   const docsPage = props.pathContext.data
 
   return (
     <div className={styles.docs}>
+      <nav className={styles.navigation}>
+        {sidebarLinks.map((header, i) => (
+          <React.Fragment key={i}>
+            <h3 className={styles.additionalCategory} key="header">
+              {header.name}
+            </h3>
+            <ul className={styles.additionalSublinks} key="slide">
+              {header.children.map((entry, j) => (
+                <li key={j}>
+                  <Link to={entry.path}>{entry.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </React.Fragment>
+        ))}
+      </nav>
       <article>{docsPage && renderAst(docsPage.htmlAst)}</article>
     </div>
   )
