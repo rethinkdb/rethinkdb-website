@@ -1,5 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import rehypeReact from 'rehype-react'
+import Github from '../components/github'
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { github: Github },
+}).Compiler
 
 import styles from './docs.module.css'
 
@@ -12,11 +18,7 @@ const Docs = props => {
 
   return (
     <div className={styles.docs}>
-      <article>
-        {docsPage && (
-          <div dangerouslySetInnerHTML={{ __html: docsPage.html }} />
-        )}
-      </article>
+      <article>{docsPage && renderAst(docsPage.htmlAst)}</article>
     </div>
   )
 }

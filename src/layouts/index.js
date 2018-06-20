@@ -5,6 +5,8 @@ import Header from '../components/header'
 import Drawer from '../components/drawer'
 import Footer from '../components/footer'
 
+import 'prismjs/themes/prism-tomorrow.css'
+
 class Layout extends React.Component {
   state = {
     drawer: false,

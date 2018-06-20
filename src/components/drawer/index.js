@@ -115,7 +115,11 @@ class Drawer extends React.Component {
               </div>
               close
             </span>
-            <Link className={styles.link} onClick={this.props.toggle} to="/faq">
+            <Link
+              className={styles.link}
+              onClick={this.props.toggle}
+              to="/docs/faq"
+            >
               faq
             </Link>
             <Link

@@ -17,6 +17,7 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
                 category
               }
               html
+              htmlAst
             }
           }
         }
@@ -29,7 +30,8 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
 
     const data = {
       ...node.node.frontmatter,
-      html: node.node.html
+      html: node.node.html,
+      htmlAst: node.node.htmlAst
     }
 
     createPage({

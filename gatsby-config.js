@@ -25,7 +25,8 @@ module.exports = {
             options: {
               classPrefix: 'language-'
             }
-          }
+          },
+          'gatsby-remark-component'
         ]
       }
     },
