@@ -53,15 +53,15 @@
   border: 0;
   overflow: hidden;
   opacity: 0;
+  transition: opacity .2s ease-out,
+              max-height .2s ease-out,
+              transform .2s ease-out;
 
   &.visible {
     opacity: 1;
     max-height: 40px;
     transform: scaleY(1);
     border-top: 1px solid color(var(--dark) a(.12));
-    transition: opacity .2s ease-out,
-                max-height .2s ease-out,
-                transform .2s ease-out;
   }
 
   & > pre {

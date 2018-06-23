@@ -13,18 +13,28 @@ class LiveRequest extends React.Component {
     visible: [0, 0, 0],
   }
 
-  constructor() {
-    super()
+  componentDidMount() {
+    this.initialState = Object.assign({}, this.state.freeze)
 
-    this.t0 = setTimeout(() => this.setState({ visible: [0, 1, 0] }), 1500)
-    this.t1 = setTimeout(() => this.setState({ visible: [0, 1, 1] }), 3800)
-    this.t2 = setTimeout(() => this.setState({ visible: [1, 1, 1] }), 6000)
+    this.start()
   }
 
   componentWillUnmount() {
     clearTimeout(this.t0)
     clearTimeout(this.t1)
     clearTimeout(this.t2)
+    clearTimeout(this.t3)
+  }
+
+  start() {
+    this.setState({
+      visible: [0, 0, 0],
+    })
+
+    this.t0 = setTimeout(() => this.setState({ visible: [0, 1, 0] }), 1500)
+    this.t1 = setTimeout(() => this.setState({ visible: [0, 1, 1] }), 3800)
+    this.t2 = setTimeout(() => this.setState({ visible: [1, 1, 1] }), 6000)
+    this.t3 = setTimeout(() => this.start(), 9000)
   }
 
   render() {
