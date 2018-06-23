@@ -32,6 +32,7 @@
 
 .specBirth {
   background-color: #fff;
+  padding: 24px 0;
 }
 
 @media (--small) {
@@ -55,5 +56,9 @@
 
   .section > :last-child {
     padding-bottom: 60px;
+  }
+
+  .specBirth {
+    padding: 40px 0;
   }
 }

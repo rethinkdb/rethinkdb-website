@@ -47,23 +47,23 @@ const IndexPage = ({ data }) => (
           <LiveRequest />
         </figure>
       </SplitFeature>
-      <SplitFeature className={styles.specBirth}>
-        <article>
-          <h2>Spectrum + RebirthDB</h2>
-          <p>
-            Spectrum is a community platform, kinda of a Slack rival, and it
-            uses RethinkDB as the primary database too! It's our new home for
-            sharing ideas and discussing the project future, we talk about
-            features, funding, database questions, etc.
-          </p>
-        </article>
-        <figure>
-          <AsyncImage src={specBirth} width="390" />
-        </figure>
-      </SplitFeature>
     </div>
     <WhatsInTheBox className={styles.section} />
     <InstallCta className={styles.section} />
+    <SplitFeature className={styles.specBirth}>
+      <article>
+        <h2>Spectrum + RebirthDB</h2>
+        <p>
+          Spectrum is a community platform, kinda of a Slack rival, and it uses
+          RethinkDB as the primary database too! It's our new home for sharing
+          ideas and discussing the project future, we talk about features,
+          funding, database questions, etc.
+        </p>
+      </article>
+      <figure>
+        <AsyncImage src={specBirth} width="390" />
+      </figure>
+    </SplitFeature>
     <Sponsors
       className={styles.section}
       images={data.allFile.edges.map(edge => edge.node.childImageSharp)}
