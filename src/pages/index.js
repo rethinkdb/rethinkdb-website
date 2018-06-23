@@ -2,12 +2,14 @@ import React from 'react'
 import cx from 'classnames'
 
 import Button from '../components/button'
+import AsyncImage from '../components/async-image'
 import Hero from '../components/index/hero'
 import HeroNotes from '../components/index/heroNotes'
 import SplitFeature from '../components/index/split-feature'
 import LiveRequest from '../components/index/live-request'
 import InstallCta from '../components/index/install-cta'
 import Sponsors from '../components/index/sponsors'
+import WhatsInTheBox from '../components/index/whats-in-the-box'
 import styles from './index.module.css'
 import '../main.css'
 
@@ -56,10 +58,11 @@ const IndexPage = ({ data }) => (
           </p>
         </article>
         <figure>
-          <img src={specBirth} width="390" />
+          <AsyncImage src={specBirth} width="390" />
         </figure>
       </SplitFeature>
     </div>
+    <WhatsInTheBox className={styles.section} />
     <InstallCta className={styles.section} />
     <Sponsors
       className={styles.section}

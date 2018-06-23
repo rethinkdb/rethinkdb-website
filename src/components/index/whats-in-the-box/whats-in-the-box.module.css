@@ -1,0 +1,54 @@
+@import '../../../theme.css';
+
+.whatsInTheBox {
+  padding: 0 18px;
+  background-color: #fff;
+}
+
+.grid {
+  padding: 40px 0;
+
+  & > article {
+    height: 275px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    color: color(var(--foregroundWhite) a(.5));
+
+    & > img {
+      width: 67%;
+      margin-top: 14px;
+    }
+
+    &:last-child > img {
+      display: block;
+      margin-left: 10%;
+    }
+  }
+}
+
+@media (--medium) {
+  .whatsInTheBox {
+    padding: 0 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+}
+
+@media (--large) {
+  .whatsInTheBox {
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+}
