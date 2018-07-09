@@ -1,7 +1,7 @@
 @import '../../../theme.css';
 
 .whatsInTheBox {
-  padding: 0 18px;
+  padding: 0 20px;
   background-color: #fff;
 }
 
@@ -13,7 +13,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     border-bottom: 1px solid rgba(0,0,0,.12);
-    color: color(var(--foregroundWhite) a(.5));
+    color: color(var(--foregroundWhite) a(.75));
 
     & > img {
       width: 67%;
@@ -40,7 +40,7 @@
 }
 
 @media (--large) {
-  .whatsInTheBox {
+  .content {
     padding: 0 20px;
     max-width: 1000px;
     margin: 0 auto;

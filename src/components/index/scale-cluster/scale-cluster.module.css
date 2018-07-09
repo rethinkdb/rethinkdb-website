@@ -1,0 +1,68 @@
+@import '../../../theme.css';
+
+.scaleCluster {
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+}
+
+.content button {
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.content code {
+  font-size: 13px;
+}
+
+.image {
+  display: none;
+
+  position: absolute;
+  right: -40px;
+  margin: 0;
+  width: 50%;
+  min-width: 0;
+
+  & > img {
+    max-width: 75vw;
+  }
+}
+
+@media (--medium) {
+  .content {
+    width: 50%;
+  }
+
+  .image {
+    display: block;
+  }
+}
+
+@media (--large) {
+  .content code {
+    font-size: 16px;
+  }
+
+  .image > img {
+    max-width: 60vw;
+  }
+}
+
+@media (--extra) {
+  .image > img {
+    max-width: 40vw;
+  }
+}

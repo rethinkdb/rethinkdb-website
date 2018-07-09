@@ -50,11 +50,9 @@ class LiveRequest extends React.Component {
           </div>
           <pre className={styles.code}>
             r<br />
-            &nbsp;&nbsp;.table(<span className={styles.str}>'game'</span>)<br />
-            &nbsp;&nbsp;.orderBy(<span className={styles.str}>
-              'score'
-            </span>)<br />
-            &nbsp;&nbsp;.limit(<span className={styles.nmb}>3</span>)<br />
+            &nbsp;&nbsp;.table(<span className="str">'game'</span>)<br />
+            &nbsp;&nbsp;.orderBy(<span className="str">'score'</span>)<br />
+            &nbsp;&nbsp;.limit(<span className="nb">3</span>)<br />
             &nbsp;&nbsp;.changes()
           </pre>
           <div />
@@ -67,12 +65,12 @@ class LiveRequest extends React.Component {
               })}
               key={i}
             >
-              <pre className={styles.code}>
+              <pre>
                 {'{'}&nbsp;
-                <span className={styles.str}>player</span>:&nbsp;
-                <span className={styles.str}>'{result.player}'</span>,​&nbsp;
-                <span className={styles.str}>score</span>:&nbsp;
-                <span className={styles.nmb}>{result.score}</span>
+                <span className="str">player</span>:&nbsp;
+                <span className="str">'{result.player}'</span>,​&nbsp;
+                <span className="str">score</span>:&nbsp;
+                <span className="nb">{result.score}</span>
                 &nbsp;{'}'}
               </pre>
             </div>

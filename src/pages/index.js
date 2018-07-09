@@ -10,6 +10,7 @@ import LiveRequest from '../components/index/live-request'
 import InstallCta from '../components/index/install-cta'
 import Sponsors from '../components/index/sponsors'
 import WhatsInTheBox from '../components/index/whats-in-the-box'
+import ScaleCluster from '../components/index/scale-cluster'
 import styles from './index.module.css'
 import '../main.css'
 
@@ -49,6 +50,7 @@ const IndexPage = ({ data }) => (
       </SplitFeature>
     </div>
     <WhatsInTheBox className={styles.section} />
+    <ScaleCluster className={styles.section} />
     <InstallCta className={styles.section} />
     <SplitFeature className={styles.specBirth}>
       <article>

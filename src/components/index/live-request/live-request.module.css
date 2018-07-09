@@ -15,19 +15,6 @@
               0 5px 15px color(var(--dark) a(.12));
 }
 
-.code {
-  margin: 0;
-  color: color(var(--dark) a(.8));
-
-  & > .str {
-    color: var(--accent);
-  }
-
-  & > .nmb {
-    color: color(var(--primary) lightness(-15%));
-  }
-}
-
 .lines {
   margin-right: 12px;
   color: color(var(--dark) a(.6));

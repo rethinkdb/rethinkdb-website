@@ -1,7 +1,8 @@
 @import '../../../theme.css';
 
 .split {
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
+  padding-bottom: 0 !important;
 }
 
 .content {
@@ -25,6 +26,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  & > img {
+    margin: 0 auto;
+  }
 }
 
 @media (--small) {
@@ -39,5 +44,9 @@
 
   .content > figure {
     width: 50%;
+
+    & > img {
+      margin: 0;
+    }
   }
 }

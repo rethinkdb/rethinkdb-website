@@ -51,3 +51,27 @@ a {
 .space {
   flex: 1;
 }
+
+code {
+  display: flex;
+  padding: 12px 24px;
+  line-height: 1.4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fff;
+  font-family: inconsolata,monospace;
+  border: 1px solid rgba(18,40,47,.12);
+}
+
+pre {
+  margin: 0;
+  color: color(var(--dark) a(.8));
+
+  & > .str {
+    color: var(--accent);
+  }
+
+  & > .nb {
+    color: color(var(--primary) lightness(-15%));
+  }
+}
