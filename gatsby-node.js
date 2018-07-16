@@ -28,6 +28,10 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
   for (let node of result.data.allMarkdownRemark.edges) {
     const pagePath = node.node.frontmatter.path
 
+    if (!pagePath) {
+      continue;
+    }
+
     const data = {
       ...node.node.frontmatter,
       html: node.node.html,

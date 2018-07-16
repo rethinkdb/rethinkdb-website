@@ -18,7 +18,15 @@ export default props => (
         Learn more
       </Button>
       <hr />
-      <p>rebirthdb on spectrum</p>
+      <p>
+        <a
+          href="https://spectrum.chat/rebirthdb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          rebirthdb on spectrum
+        </a>
+      </p>
     </div>
 
     <section>
@@ -81,7 +89,7 @@ export default props => (
         </section>
       </nav>
       <h3 className={styles.star}>
-        <a href={props.github}>
+        <a href={props.github} target="_blank" rel="noopener noreferrer">
           <Github color="#fff" size="20" />
           &nbsp;&nbsp; Star this project on GitHub
         </a>

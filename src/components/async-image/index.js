@@ -18,11 +18,17 @@ class AsyncImage extends React.Component {
       }
     }
 
-    window.addEventListener('load', this.listener)
+    if (!document.readyState || document.readyState === 'complete') {
+      this.listener()
+    } else {
+      window.addEventListener('load', this.listener)
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('load', this.listener)
+    if (typeof this.listener === 'function') {
+      window.removeEventListener('load', this.listener)
+    }
   }
 
   render() {

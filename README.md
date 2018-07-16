@@ -5,6 +5,9 @@ RebirthDB website
 
 ```sh
 npm install --global gatsby-cli
+cd docs
+git submodule init
+git submodule update
 ```
 
 ## Development

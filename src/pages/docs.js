@@ -4,10 +4,11 @@ import rehypeReact from 'rehype-react'
 
 import additionalTree from '../utils/additionalTree'
 import Github from '../components/github'
+import AsyncImage from '../components/async-image'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { github: Github },
+  components: { github: Github, asyncimage: AsyncImage },
 }).Compiler
 
 import styles from './docs.module.css'
@@ -21,6 +22,8 @@ const Docs = props => {
 
   const docsPage = props.pathContext.data
 
+  console.log(docsPage)
+
   return (
     <div className={styles.docs}>
       <nav className={styles.navigation}>
@@ -30,16 +33,22 @@ const Docs = props => {
               {header.name}
             </h3>
             <ul className={styles.additionalSublinks} key="slide">
-              {header.children.map((entry, j) => (
-                <li key={j}>
-                  <Link to={entry.path}>{entry.title}</Link>
-                </li>
-              ))}
+              {header.children
+                .filter(entry => !entry.disableSidebarLink)
+                .sort((a, b) => a.sidebarPosition - b.sidebarPosition)
+                .map((entry, j) => (
+                  <li key={j}>
+                    <Link to={entry.path}>{entry.title}</Link>
+                  </li>
+                ))}
             </ul>
           </React.Fragment>
         ))}
       </nav>
-      <article>{docsPage && renderAst(docsPage.htmlAst)}</article>
+      <article>
+        {docsPage && !docsPage.hideTitle && <h1>{docsPage.title}</h1>}
+        {docsPage && renderAst(docsPage.htmlAst)}
+      </article>
     </div>
   )
 }
@@ -56,6 +65,8 @@ export const query = graphql`
             parentPage
             title
             category
+            disableSidebarLink
+            sidebarPosition
           }
         }
       }

@@ -15,10 +15,31 @@
 .docs article {
   max-width: 800px;
   width: 100%;
+  line-height: 1.6;
 }
 
 .docs article h1 {
   font-size: 32px;
+  margin: 20px 0;
+}
+
+.docs article h2 {
+  margin: 16px 0;
+}
+
+.docs article img {
+  display: block;
+  margin: 16px auto;
+
+  &[floatright] {
+    float: right;
+    margin-left: 12px;
+  }
+}
+
+.docs :not(pre) > code {
+  font-size: 14px;
+  padding: 3px 4px;
 }
 
 .docs [class="note"] {

@@ -54,7 +54,28 @@
   & > pre {
     padding: 10px;
     font-size: 12px;
+    margin: 0;
+    height: 100%;
+    line-height: 20px;
   }
+}
+
+.code {
+  line-height: 1.4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fff;
+  font-family: inconsolata, monospace;
+  margin: 0;
+  color: color(var(--dark) a(.8));
+}
+
+.str {
+  color: var(--accent);
+}
+
+.nb {
+  color: color(var(--primary) lightness(-15%));
 }
 
 @media (--small) {
@@ -75,5 +96,6 @@
 
   .result > pre {
     font-size: 16px;
+    line-height: 24px;
   }
 }
