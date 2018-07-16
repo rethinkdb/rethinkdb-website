@@ -72,6 +72,7 @@
   margin: 8px 0 0 0;
   padding: 0 0 0 8px;
   font-size: 14px;
+  line-height: 1.4;
   list-style: none;
 
   &:before {

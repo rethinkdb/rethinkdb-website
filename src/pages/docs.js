@@ -1,14 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import rehypeReact from 'rehype-react'
+import visit from 'unist-util-visit'
 
 import additionalTree from '../utils/additionalTree'
-import Github from '../components/github'
 import AsyncImage from '../components/async-image'
+import SupportedPlatforms from '../components/supported-platforms'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { github: Github, asyncimage: AsyncImage },
+  components: {
+    asyncimage: AsyncImage,
+    supportedplatforms: SupportedPlatforms,
+  },
 }).Compiler
 
 import styles from './docs.module.css'
@@ -22,7 +26,17 @@ const Docs = props => {
 
   const docsPage = props.pathContext.data
 
-  console.log(docsPage)
+  // replace package version in docs
+  if (docsPage && docsPage.htmlAst) {
+    visit(docsPage.htmlAst, 'text', node => {
+      if (node.value.indexOf('[[packageVersion]]') > -1) {
+        node.value = node.value.replace(
+          /\[\[packageVersion\]\]/g,
+          props.data.githubRepositoryInformations.version
+        )
+      }
+    })
+  }
 
   return (
     <div className={styles.docs}>
@@ -57,6 +71,10 @@ export default Docs
 
 export const query = graphql`
   query DocsQuery {
+    githubRepositoryInformations {
+      version
+    }
+
     allMarkdownRemark(filter: { frontmatter: { parentPage: { eq: "docs" } } }) {
       edges {
         node {

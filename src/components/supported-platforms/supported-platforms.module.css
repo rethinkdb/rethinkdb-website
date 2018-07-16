@@ -1,0 +1,72 @@
+.supportedPlatforms {
+  background: #f1f5f5;
+  padding: 16px 24px;
+  border-radius: 3px; }
+
+.platformCategory {
+  margin-bottom: 2rem;
+}
+
+.platformCategory:last-child {
+  margin-bottom: 0;
+}
+
+.supportedPlatforms .platformCategory h2 {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  color: #545f63;
+}
+
+.platformCategory .platformButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 20px;
+}
+
+.platformCategory .platformButtons li {
+  position: relative;
+  width: 190px;
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  padding: 0 20px;
+  list-style-type: none;
+  border-radius: 3px;
+  border: thin solid #d0e0e5;
+  background: #fefeff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.02), inset 0px 1px 0px 0px white;
+  transition: border-color 0.1s linear;
+}
+
+.platformCategory .platformButtons li img {
+  width: 22px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.platformCategory .platformButtons li p {
+  font-size: 22px;
+  line-height: 31.68px;
+  margin: 0;
+  line-height: 41px;
+  margin-left: 40px;
+  color: #214753;
+}
+
+.platformCategory .platformButtons li p.smaller-font {
+  font-size: 19px;
+  line-height: 27px;
+}
+
+.platformCategory .platformButtons li p span.driver-author {
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c606b;
+}
