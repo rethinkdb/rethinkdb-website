@@ -52,7 +52,7 @@
 }
 
 .platformCategory .platformButtons li p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 31.68px;
   margin: 0;
   line-height: 41px;
@@ -68,5 +68,11 @@
 .platformCategory .platformButtons li p span.driver-author {
   font-size: 14px;
   line-height: 20px;
+  color: #3c606b;
+}
+
+.driverAuthor {
+  font-size: 14px;
+  line-height: 20.16px;
   color: #3c606b;
 }

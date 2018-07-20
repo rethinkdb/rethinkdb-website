@@ -16,7 +16,8 @@ module.exports = {
             resolve: 'gatsby-remark-custom-blocks',
             options: {
               blocks: {
-                note: 'note'
+                note: 'note',
+                warning: 'note warning'
               }
             }
           },
@@ -26,7 +27,8 @@ module.exports = {
               classPrefix: 'language-'
             }
           },
-          'gatsby-remark-component'
+          'gatsby-remark-component',
+          'gatsby-remark-autolink-headers'
         ]
       }
     },

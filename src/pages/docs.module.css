@@ -14,7 +14,7 @@
 
 .docs article {
   max-width: 800px;
-  width: 100%;
+  flex: 1;
   line-height: 1.6;
 }
 
@@ -30,6 +30,7 @@
 .docs article img {
   display: block;
   margin: 16px auto;
+  max-height: 200px;
 
   &[floatright] {
     float: right;
@@ -37,34 +38,67 @@
   }
 }
 
+.docs article table {
+  border-collapse: collapse;
+  margin: 12px 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.docs article table thead th {
+  border-bottom: 1px solid color(var(--dark) a(.3));
+  font-weight: 600;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.docs article table tbody td {
+  border-bottom: 1px solid color(var(--dark) a(.1));
+  padding: 8px 0;
+}
+
 .docs :not(pre) > code {
   font-size: 14px;
   padding: 3px 4px;
 }
 
-.docs [class="note"] {
+.docs [class*="note"] {
   display: block;
   margin: 20px 0;
   padding: 12px 24px;
-  background: color(var(--primary) lightness(+27%));
+  background-color: color(var(--primary) lightness(+27%));
   border-radius: 3px;
   overflow: hidden;
   text-decoration: none;
 
+  &[class*="warning"] {
+    background-color: color(var(--accent) lightness(+10%));
+  }
+
   & > p {
     margin: 0;
+  }
+
+  & > ul:last-child {
+    margin-bottom: 2px;
   }
 }
 
 .navigation {
   display: none;
-  width: 245px;
+  flex: 1;
+  max-width: 245px;
+  min-width: 150px;
   margin-right: 24px;
 }
 
 .additionalCategory {
   font-size: 16px;
   font-weight: 500;
+
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
 }
 
 .additionalSublinks {

@@ -15,6 +15,8 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
                 parentPage
                 title
                 category
+                switcher
+                toc
               }
               html
               htmlAst

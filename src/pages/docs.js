@@ -6,12 +6,15 @@ import visit from 'unist-util-visit'
 import additionalTree from '../utils/additionalTree'
 import AsyncImage from '../components/async-image'
 import SupportedPlatforms from '../components/supported-platforms'
+import TableOfContents from '../components/table-of-contents'
+import LanguageChooser from '../components/language-chooser'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
     asyncimage: AsyncImage,
     supportedplatforms: SupportedPlatforms,
+    toc: TableOfContents,
   },
 }).Compiler
 
@@ -61,6 +64,8 @@ const Docs = props => {
       </nav>
       <article>
         {docsPage && !docsPage.hideTitle && <h1>{docsPage.title}</h1>}
+        {docsPage && docsPage.toc && <TableOfContents ast={docsPage.htmlAst} />}
+        {docsPage && docsPage.switcher && <LanguageChooser />}
         {docsPage && renderAst(docsPage.htmlAst)}
       </article>
     </div>
@@ -85,6 +90,8 @@ export const query = graphql`
             category
             disableSidebarLink
             sidebarPosition
+            switcher
+            toc
           }
         }
       }
