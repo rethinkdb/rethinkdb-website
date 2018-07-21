@@ -12,3 +12,14 @@ index:
       link: 'http://www.aidaxbi.com'
     - image: 'zerotier.png'
       link: 'https://www.zerotier.com'
+
+docsCategoriesOrder:
+  - Getting started
+  - The ReQL query language
+  - The RethinkDB data model
+  - ReQL in practice
+  - Administration
+  - Deployment
+  - Troubleshooting
+  - Integration
+  - RethinkDB architecture

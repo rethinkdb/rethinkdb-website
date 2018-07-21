@@ -4,6 +4,7 @@ import rehypeReact from 'rehype-react'
 import visit from 'unist-util-visit'
 
 import additionalTree from '../utils/additionalTree'
+import replacePackageVersion from '../utils/replacePackageVersion'
 import AsyncImage from '../components/async-image'
 import SupportedPlatforms from '../components/supported-platforms'
 import TableOfContents from '../components/table-of-contents'
@@ -25,20 +26,15 @@ const Docs = props => {
     ...n.node.frontmatter,
   }))
 
-  const sidebarLinks = additionalTree(pages).additionalTree
+  const sidebarLinks = additionalTree(
+    pages,
+    props.data.yaml.docsCategoriesOrder
+  ).additionalTree
 
   const docsPage = props.pathContext.data
 
-  // replace package version in docs
   if (docsPage && docsPage.htmlAst) {
-    visit(docsPage.htmlAst, 'text', node => {
-      if (node.value.indexOf('[[packageVersion]]') > -1) {
-        node.value = node.value.replace(
-          /\[\[packageVersion\]\]/g,
-          props.data.githubRepositoryInformations.version
-        )
-      }
-    })
+    replacePackageVersion(docsPage)
   }
 
   return (
@@ -55,7 +51,9 @@ const Docs = props => {
                 .sort((a, b) => a.sidebarPosition - b.sidebarPosition)
                 .map((entry, j) => (
                   <li key={j}>
-                    <Link to={entry.path}>{entry.title}</Link>
+                    <Link to={entry.path}>
+                      {entry.sideTitle || entry.title}
+                    </Link>
                   </li>
                 ))}
             </ul>
@@ -87,6 +85,7 @@ export const query = graphql`
             path
             parentPage
             title
+            sideTitle
             category
             disableSidebarLink
             sidebarPosition
@@ -95,6 +94,10 @@ export const query = graphql`
           }
         }
       }
+    }
+
+    yaml {
+      docsCategoriesOrder
     }
   }
 `

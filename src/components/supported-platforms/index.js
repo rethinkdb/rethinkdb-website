@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import AsyncImage from '../async-image'
 import styles from './supported-platforms.module.css'
 
-const OSPlatforms = (
+const DriversPlatforms = (
   <section className={styles.supportedPlatforms}>
     <section className={styles.platformCategory}>
       <h2>Official packages</h2>
@@ -37,7 +37,7 @@ const OSPlatforms = (
     </section>
     <section className={styles.platformCategory}>
       <h2>Community supported packages</h2>
-      <ul class={styles.platformButtons}>
+      <ul className={styles.platformButtons}>
         <li>
           <a
             href="https://github.com/bchavez/RethinkDb.Driver"
@@ -239,31 +239,31 @@ const OSPlatforms = (
   </section>
 )
 
-const DriversPlatforms = (
+const OSPlatforms = (
   <section className={styles.supportedPlatforms}>
     <section className={styles.platformCategory}>
       <h2>Official packages</h2>
       <ul className={styles.platformButtons}>
         <li>
-          <Link to="/docs/install/drivers/ubuntu/">
+          <Link to="/docs/install/ubuntu/">
             <AsyncImage src="/docs/ubuntu.png" />
             <p>Ubuntu</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/macos/">
+          <Link to="/docs/install/macos/">
             <AsyncImage src="/docs/macos.png" />
             <p>OS X</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/centos/">
+          <Link to="/docs/install/centos/">
             <AsyncImage src="/docs/centos.png" />
             <p>CentOS</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/debian/">
+          <Link to="/docs/install/debian/">
             <AsyncImage src="/docs/debian.png" />
             <p>Debian</p>
           </Link>
@@ -274,37 +274,37 @@ const DriversPlatforms = (
       <h2>Community supported packages</h2>
       <ul className={styles.platformButtons}>
         <li>
-          <Link to="/docs/install/drivers/arch/">
+          <Link to="/docs/install/arch/">
             <AsyncImage src="/docs/arch.png" />
             <p>Arch Linux</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/opensuse/">
+          <Link to="/docs/install/opensuse/">
             <AsyncImage src="/docs/opensuse.png" />
             <p>openSUSE</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/fedora/">
+          <Link to="/docs/install/fedora/">
             <AsyncImage src="/docs/fedora.png" />
             <p>Fedora</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/mint/">
+          <Link to="/docs/install/mint/">
             <AsyncImage src="/docs/mint.png" />
             <p>Linux Mint</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/raspbian/">
+          <Link to="/docs/install/raspbian/">
             <AsyncImage src="/docs/raspbian.png" />
             <p>Raspbian</p>
           </Link>
         </li>
         <li>
-          <Link to="/docs/install/drivers/gentoo/">
+          <Link to="/docs/install/gentoo/">
             <AsyncImage src="/docs/gentoo.png" />
             <p>Gentoo</p>
           </Link>
@@ -315,6 +315,6 @@ const DriversPlatforms = (
 )
 
 const SupportedPlatforms = props =>
-  props.isDrivers ? DriversPlatforms : OSPlatforms
+  props.isdrivers ? DriversPlatforms : OSPlatforms
 
 export default SupportedPlatforms
