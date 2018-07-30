@@ -43,7 +43,7 @@ class Drawer extends React.Component {
   }
 
   pageChange() {
-    this.setState(additionalTree(this.props.pages))
+    this.setState(additionalTree(this.props.pages, this.props.headers))
   }
 
   toggleAdditionalTreeCategory(i) {

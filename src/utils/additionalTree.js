@@ -2,6 +2,8 @@ export default (pages, headers) => {
   const isDocs = location.pathname.indexOf('/docs') > -1
   const isApi = location.pathname.indexOf('/api') > -1
 
+  console.log(headers)
+
   const parentPage = isDocs ? 'docs' : isApi ? 'api' : null
 
   if (!parentPage) {

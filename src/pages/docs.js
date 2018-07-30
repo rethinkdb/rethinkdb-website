@@ -37,6 +37,8 @@ const Docs = props => {
     replacePackageVersion(docsPage)
   }
 
+  console.log(props)
+
   return (
     <div className={styles.docs}>
       <nav className={styles.navigation}>

@@ -59,6 +59,15 @@
   padding: 8px 0;
 }
 
+.docs article table tbody td pre,
+.docs article table tbody td p {
+  margin: 6px;
+}
+
+.docs article table tbody td code {
+  white-space: pre-wrap;
+}
+
 .docs :not(pre) > code {
   font-size: 14px;
   padding: 3px 4px;
@@ -89,7 +98,7 @@
 .navigation {
   display: none;
   flex: 1;
-  width: 150px;
+  max-width: 150px;
   margin-right: 24px;
 }
 
@@ -138,6 +147,7 @@
 @media (--large) {
   .navigation {
     width: 200px;
+    flex: 0 200px;
   }
 
   .docs article {

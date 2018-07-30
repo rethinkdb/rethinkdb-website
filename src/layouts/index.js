@@ -45,6 +45,7 @@ class Layout extends React.Component {
           opened={this.state.drawer}
           toggle={this.toggleDrawer}
           pages={pages}
+          headers={this.props.data.yaml.docsCategoriesOrder}
         />
         <main>{this.props.children()}</main>
         <Footer github={this.props.data.yaml.index.githubLink} />
@@ -58,6 +59,8 @@ export default Layout
 export const query = graphql`
   query IndexLayoutQuery {
     yaml {
+      docsCategoriesOrder
+
       index {
         githubLink
       }

@@ -41,7 +41,6 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
     const data = {
       ...node.node.frontmatter,
       filePath: filePath,
-      html: node.node.html,
       htmlAst: node.node.htmlAst
     }
 
@@ -50,7 +49,8 @@ module.exports.createPages = async ({ boundActionCreators, graphql }) => {
       component: docsTemplate,
       layout: 'index',
       context: {
-        pagePath
+        pagePath,
+        data
       }
     })
   }
