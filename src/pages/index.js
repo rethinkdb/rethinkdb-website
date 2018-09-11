@@ -29,16 +29,16 @@ const IndexPage = ({ data }) => (
     <div className={cx(styles.section, styles.intro)}>
       <SplitFeature>
         <article>
-          <h1>RebirthDB pushes JSON to your apps in realtime.</h1>
+          <h1>RethinkDB pushes JSON to your apps in realtime.</h1>
           <p>
             When your app polls for data, it becomes slow, unscalable, and
             cumbersome to maintain.<br />
             <br />
-            RebirthDB is the open-source, scalable database that makes building
+            RethinkDB is the open-source, scalable database that makes building
             realtime apps dramatically easier.<br />
             <br />
             <Button to="/docs">
-              What is RebirthDB&nbsp;<span className={styles.buttonArrow}>
+              What is RethinkDB&nbsp;<span className={styles.buttonArrow}>
                 &rsaquo;
               </span>
             </Button>
@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => (
     <InstallCta className={styles.section} />
     <SplitFeature className={styles.specBirth}>
       <article>
-        <h2>Spectrum + RebirthDB</h2>
+        <h2>Spectrum + RethinkDB</h2>
         <p>
           Spectrum is a community platform, kinda of a Slack rival, and it uses
           RethinkDB as the primary database too! It's our new home for sharing

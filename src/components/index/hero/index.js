@@ -12,7 +12,7 @@ export default () => (
     </div>
     <br />
     <Button to="/docs" cta={true}>
-      Install RebirthDB&nbsp;<span className={styles.buttonArrow}>
+      Install RethinkDB&nbsp;<span className={styles.buttonArrow}>
         &rsaquo;
       </span>
     </Button>

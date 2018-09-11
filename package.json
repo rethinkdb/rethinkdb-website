@@ -1,12 +1,12 @@
 {
-  "name": "rebirthdb-website",
-  "description": "RebirthDB website",
+  "name": "rethinkdb-website",
+  "description": "RethinkDB website",
   "version": "1.0.0",
-  "author": "RebirthDB",
+  "author": "RethinkDB",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rebirthdb/rebirthdb-website"
+    "url": "https://github.com/rethinkdb/rethinkdb-website"
   },
   "scripts": {
     "build": "gatsby build",

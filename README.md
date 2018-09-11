@@ -1,5 +1,5 @@
-# rebirthdb-website
-RebirthDB website
+# rethinkdb-website
+RethinkDB website
 
 ## Install
 
