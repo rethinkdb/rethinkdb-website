@@ -20,11 +20,11 @@ export default props => (
       <hr />
       <p>
         <a
-          href="https://spectrum.chat/rebirthdb"
+          href="https://spectrum.chat/rethinkdb"
           target="_blank"
           rel="noopener noreferrer"
         >
-          rebirthdb on spectrum
+          rethinkdb on spectrum
         </a>
       </p>
     </div>
@@ -80,7 +80,7 @@ export default props => (
           </ul>
         </section>
         <section>
-          <strong>RebirthDB</strong>
+          <strong>RethinkDB</strong>
           <ul className={styles.links}>
             <li>
               <Link to="/blog/">Blog</Link>

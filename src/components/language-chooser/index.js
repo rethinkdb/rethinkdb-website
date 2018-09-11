@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './language-chooser.module.css'
 
-const LANGUAGE_KEY = 'rebirthdb-website-preferred-language'
+const LANGUAGE_KEY = 'rethinkdb-website-preferred-language'
 const ALLOWED_LANGUAGES = ['javascript', 'ruby', 'python', 'java']
 
 class LanguageChooser extends React.Component {

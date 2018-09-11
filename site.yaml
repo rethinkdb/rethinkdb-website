@@ -1,12 +1,12 @@
 siteMetadata:
-  title    : 'RebirthDB'
+  title    : 'RethinkDB'
   fullTitle: 'Rebirth DB: the open-source database for the realtime web'
-  keywords : 'RebirthDB, Rebirth, Rethink, RethinkDB, database, real-time, scalable, open-source'
+  keywords : 'RethinkDB, Rebirth, Rethink, RethinkDB, database, real-time, scalable, open-source'
 
 index:
-  twitterAccount: '@rebirthdb'
-  githubLink: 'https://github.com/RebirthDB/rebirthdb'
-  releaseLink: 'https://github.com/RebirthDB/rebirthdb/releases'
+  twitterAccount: '@rethinkdb'
+  githubLink: 'https://github.com/RethinkDB/rethinkdb'
+  releaseLink: 'https://github.com/RethinkDB/rethinkdb/releases'
   sponsorsLinks:
     - image: 'aidax.png'
       link: 'http://www.aidaxbi.com'

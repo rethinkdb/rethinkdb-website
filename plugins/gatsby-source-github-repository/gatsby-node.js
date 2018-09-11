@@ -11,9 +11,9 @@ exports.sourceNodes = async ({ boundActionCreators }, { user, repo }) => {
   let version
 
   try {
-    let { data } = await axios(`https://api.github.com/repos/${user || 'RebirthDB'}/${repo || 'rebirthdb'}/releases/latest`)
+    let { data } = await axios(`https://api.github.com/repos/${user || 'RethinkDB'}/${repo || 'rethinkdb'}/releases/latest`)
 
-    release = `RebirthDB ${data.name}`
+    release = `RethinkDB ${data.name}`
     version = data.tag_name.replace('v', '')
   } catch (err) {
     if (err.response && err.response.status === 404) {
@@ -24,7 +24,7 @@ exports.sourceNodes = async ({ boundActionCreators }, { user, repo }) => {
   }
 
   try {
-    let { data } = await axios(`https://api.github.com/repos/${user || 'RebirthDB'}/${repo || 'rebirthdb'}`)
+    let { data } = await axios(`https://api.github.com/repos/${user || 'RethinkDB'}/${repo || 'rethinkdb'}`)
 
     stargazers = data.stargazers_count
   } catch (err) {
@@ -32,7 +32,7 @@ exports.sourceNodes = async ({ boundActionCreators }, { user, repo }) => {
   }
 
   createNode({
-    id: 'rebirthdb-github-repository',
+    id: 'rethinkdb-github-repository',
     children: [],
     parent: null,
     release,
@@ -40,7 +40,7 @@ exports.sourceNodes = async ({ boundActionCreators }, { user, repo }) => {
     version,
     internal: {
       contentDigest: digest(release + stargazers + version),
-      description: 'Get informations about RebirthDB repository',
+      description: 'Get informations about RethinkDB repository',
       type: 'GithubRepositoryInformations',
       mediaType: 'text/plain'
     }

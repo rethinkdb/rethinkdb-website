@@ -33,7 +33,7 @@ module.exports = {
       }
     },
     { resolve: 'gatsby-source-github-repository', options: { user: 'RethinkDB', repo: 'rethinkdb' } },
-    // { resolve: 'gatsby-source-github-repository', options: { user: 'RebirthDB', repo: 'rebirthdb' } },
+    // { resolve: 'gatsby-source-github-repository', options: { user: 'RethinkDB', repo: 'rethinkdb' } },
     { resolve: 'gatsby-plugin-nprogress', options: { color: '#ff7d92', } },
     {
       resolve: 'gatsby-source-filesystem',

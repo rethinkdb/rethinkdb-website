@@ -8,7 +8,7 @@ export default props => (
   <div className={cx(styles.installCta, props.className)}>
     <h2>Install in seconds on Linux, OS X, or Windows</h2>
     <div className={styles.buttons}>
-      <Button to="/docs">Install RebirthDB</Button>
+      <Button to="/docs">Install RethinkDB</Button>
       <Button to="/faq" reverse={true}>
         Lean more
       </Button>
